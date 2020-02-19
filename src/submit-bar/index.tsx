@@ -44,7 +44,7 @@ function SubmitBar(
   function Text() {
     if (typeof price === 'number') {
       const priceArr = (price / 100).toFixed(props.decimalLength).split('.');
-      const decimalStr = props.decimalLength ? `.${priceArr[1]}` : '';
+      const decimalStr = priceArr[1] ? props.decimalLength ? `.${priceArr[1]}` : '' : '';
       return (
         <div
           style={{ textAlign: props.textAlign ? props.textAlign : '' }}
